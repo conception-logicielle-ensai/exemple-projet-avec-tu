@@ -1,7 +1,5 @@
-from functools import reduce
 import logging
-from pathlib import Path
-from typing import Iterable, Optional
+from typing import Optional
 from src.model.compteur import Compteur
 from src.dao.lecture_fichier_dao import LectureFichierDAO
 

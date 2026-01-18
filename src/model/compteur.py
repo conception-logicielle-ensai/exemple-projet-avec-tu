@@ -1,5 +1,5 @@
 from functools import reduce
-from typing import Counter, Dict, Iterable
+from typing import Counter, Iterable
 
 from src.custom_types import Lettre
 
@@ -17,7 +17,7 @@ class Compteur:
     @property
     def total_lignes(self) -> int:
         return len(
-            list(filter(lambda ligne: ligne != None, self.__iterateur_total_lignes))
+            list(filter(lambda ligne: ligne is not None, self.__iterateur_total_lignes))
         )
 
     @property
@@ -25,7 +25,7 @@ class Compteur:
         return sum(
             map(
                 len,
-                filter(lambda ligne: ligne != None, self.__iterateur_total_caracteres),
+                filter(lambda ligne: ligne is not None, self.__iterateur_total_caracteres),
             )
         )
 

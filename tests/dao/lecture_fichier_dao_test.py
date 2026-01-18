@@ -20,8 +20,8 @@ class TestIsFileOnARemote:
     # Les fixtures peuvent simplement permettre d'éviter de réecrire des bouts de code
     # On peut également chainer les check si ça regroupe la même logique
     def test_https_url_is_well_detected(self, dao: LectureFichierDAO):
-        assert dao.is_file_on_a_remote("https://google.com")  # == True
-        assert dao.is_file_on_a_remote("local.txt") == False
+        assert dao.is_file_on_a_remote("https://google.com")
+        assert not dao.is_file_on_a_remote("local.txt")
 
 
 # Les fixtures permettent aussi de générer des fichiers temporaires ou des ressources temporaires nécessaires pendant les tests
