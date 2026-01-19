@@ -25,7 +25,9 @@ class Compteur:
         return sum(
             map(
                 len,
-                filter(lambda ligne: ligne is not None, self.__iterateur_total_caracteres),
+                filter(
+                    lambda ligne: ligne is not None, self.__iterateur_total_caracteres
+                ),
             )
         )
 
