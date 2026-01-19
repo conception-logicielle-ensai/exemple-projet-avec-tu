@@ -8,7 +8,7 @@ on:
 
 jobs:
   format:
-    name: Linting avec Ruff
+    name: Format check avec Ruff
     runs-on: ubuntu-22.04
     
     steps:
